@@ -56,6 +56,7 @@ class Mario:
     def loop(self):
         self.y_vel -= self.gravity
         self.move_y(self.y_vel)
+        self.animation()
 
     def jump(self):
         self.y_vel = SPRITE_JUMP_INITIAL_SPEED
@@ -102,4 +103,5 @@ class Mario:
 
     def draw(self):
         if not self.__dying:
+            self.animation()
             pyxel.blt(self.__x, self.__y, *self.sprite, colkey=0)

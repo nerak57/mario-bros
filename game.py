@@ -210,6 +210,7 @@ class Game:
                 # of gravity and the complement of jumping
                 self.map.mario.loop()
 
+
                 # Here is the code for going to the floor and not sinking in.
                 if self.map.mario.y_vel <= 0 and self.collision_mario.touches_floor(
                         self.map.mario):
